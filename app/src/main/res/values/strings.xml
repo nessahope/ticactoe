@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TicTacToev2</string>
+    <string name="score_count">Score Count!</string>
+    <string name="player_1">Player 1:</string>
+    <string name="player_2">Player 2:</string>
+    <string name="play">Play!</string>
+    <string name="quit">Quit!</string>
+    <string name="let_s_play_tic_tac_toe">Let\'s Play Tic Tac Toe!</string>
+    <string name="total_games_won">Games won: </string>
+</resources>

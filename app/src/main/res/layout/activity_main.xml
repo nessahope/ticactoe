@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    android:id="@+id/ticTacToeBoard"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+
+
+            <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/let_s_play_tic_tac_toe"
+                android:textSize="25sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="16sp"/>
+
+            <GridLayout
+                android:id="@+id/gridlayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="3"
+                android:rowCount="3"
+                app:layout_constraintTop_toBottomOf="@id/textViewTitle"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="32sp">
+
+                <ImageView
+                    android:id="@+id/space_0"
+                    android:layout_marginBottom="4dp"
+                    android:background="@color/Yellow"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp" />
+
+                <ImageView
+                    android:id="@+id/space_1"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@color/Yellow"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp" />
+
+                <ImageView
+                    android:id="@+id/space_2"
+                    android:layout_marginBottom="4dp"
+                    android:background="@color/Yellow"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp" />
+
+                <ImageView
+                    android:id="@+id/space_3"
+                    android:background="@color/Yellow"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp" />
+
+                <ImageView
+                    android:id="@+id/space_4"
+                    android:background="@color/Yellow"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp" />
+
+                <ImageView
+                    android:id="@+id/space_5"
+                    android:background="@color/Yellow"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp" />
+
+                <ImageView
+                    android:id="@+id/space_6"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/Yellow"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp" />
+
+                <ImageView
+                    android:id="@+id/space_7"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@color/Yellow"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp" />
+
+                <ImageView
+                    android:id="@+id/space_8"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/Yellow"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp" />
+            </GridLayout>
+
+            <TextView
+                android:id="@+id/textViewScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/score_count"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@id/gridlayout"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="25dp"/>
+
+            <TextView
+                android:id="@+id/textViewPlayerOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/player_1"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/textViewScore"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="25sp"/>
+
+            <TextView
+                android:id="@+id/textViewPlayerTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/player_2"
+                android:textSize="16sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/textViewPlayerOne"
+                app:layout_constraintBottom_toBottomOf="@id/textViewPlayerOne"
+                android:layout_marginRight="25sp"
+                />
+
+            <TextView
+                android:id="@+id/playerOneMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/textViewPlayerOne"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="-"
+                android:textSize="16sp"
+                android:layout_marginLeft="25sp"/>
+
+            <TextView
+                android:id="@+id/playerTwoMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginRight="25sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/playerOneMessage"
+                app:layout_constraintBottom_toBottomOf="@id/playerOneMessage"/>
+
+    <TextView
+        android:id="@+id/playerOneTotalGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/playerOneMessage"
+        android:layout_marginLeft="25sp"
+        android:layout_marginTop="45sp"
+        android:text="@string/total_games_won"/>
+
+    <TextView
+        android:id="@+id/playerTwoTotalGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/playerTwoMessage"
+        android:layout_marginRight="25sp"
+        android:layout_marginTop="45sp"
+        android:text="@string/total_games_won"/>
+
+            <Button
+                android:id="@+id/btnPlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/playerOneTotalGame"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="#546de5"
+                android:textColor="#ffff"
+                android:textSize="16sp"
+                android:text="@string/play"
+                android:layout_marginLeft="35sp"/>
+
+            <Button
+                android:id="@+id/btnQuit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/btnPlay"
+                app:layout_constraintBottom_toBottomOf="@id/btnPlay"
+                app:layout_constraintRight_toRightOf="parent"
+                android:background="#546de5"
+                android:textColor="#ffff"
+                android:textSize="16sp"
+                android:text="@string/quit"
+                android:layout_marginRight="35sp"
+                />
+
+        </android.support.constraint.ConstraintLayout>
